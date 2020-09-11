@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>moj rad</title>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+	<script src="store.js" async></script>
+	<link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="page">
+	
+			<div id="header">
+				<a href="index.html"><div class="logo">MOJA KAFA</div></a>
+				<ul>
+					<li class="current">
+						<a href="index1.html">Pocetak</a>
+					</li>
+					<li>
+						<a href="#meni">Meni</a>
+					</li>
+					<li>
+						<a href="#loki">Lokacija</a>
+					</li>
+					<li>
+						<a href="#kontakt">Kontakt</a>
+					</li>
+					
+				</ul>
+			</div>
+	<div id="figure" >
+                <a href="index.html"><br>Mi kuvamo najbolju kafu, <p>posetite nas</p> </a>
+					<img src="images/zemska.jpg" alt="Image">
+					<span id="home">Da li ste za kafu?</span> 
+				</div>
+				
+				  
+        <section class="container content-section">
+            <h2 id="meni" class="section-header">Meni</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Kafa1</span>
+                    <img class="shop-item-image" src="images/coffee1.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$10.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">Dodaj u korpu</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Kafa2</span>
+                    <img class="shop-item-image" src="images/coffee2.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$6.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">Dodaj u korpu</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Kafa3</span>
+                    <img class="shop-item-image" src="images/coffee3.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$6.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">Dodaj u korpu</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Kafa4</span>
+                    <img class="shop-item-image" src="images/coffee4.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$5.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">KORPA</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">Proizvod</span>
+                <span class="cart-price cart-header cart-column">Cena</span>
+                <span class="cart-quantity cart-header cart-column">Kolicina</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Ukupno</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">Naruci</button>
+        </section>
+    <h2 id="loki" class="section-header" >Lokacija</h2>
+
+<div id="map"></div>
+<!-- treba zameniti api sa licnim -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+</script>
+  <footer id="kontakt">
+        <div class="kontakt"><p class="vs">Kontakt</p>
+      <p>066/666-666</p>
+      <p class="vs">Adresa</p>
+      <p>Kemala Malovcica 12</p></div>
+      
+    
+        <div><p class="vs">Radno vreme</p>
+      <p>pon-sub: 8-23</p>
+        <p>ned: 12-23</p>
+      
+      
+      
+      </div>
+        
+        </footer>      
+        
+</div>
+
+</body>
+<script>
+  function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}  
+    
+ var myVar;
+
+
+  myVar = setTimeout(alertFunc, 3000);
+
+
+function alertFunc() {
+ var u = document.getElementById("figure").firstElementChild;
+    u.style.left="0%";
+    u.style.opacity= 1;
+    u.style.transitionDuration = "1s";
+}
+    </script>
+    
+</html>
